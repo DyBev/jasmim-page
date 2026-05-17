@@ -38,5 +38,30 @@ export default [
     }
   },
 
+  {
+    files: ["**/*.{tsx,jsx}"],
+    plugins: {
+      "react-hooks": reactHooks,
+      "react-refresh": reactRefresh
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      "react-refresh/only-export-components": "warn"
+    }
+  },
+
+  {
+    files: [
+      "**/+data.ts",
+      "**/+route.ts",
+      "**/+config.ts",
+      "**/+onBeforeRender.ts"
+    ],
+    rules: {
+      "react-hooks/rules-of-hooks": "off",
+      "react-refresh/only-export-components": "off"
+    }
+  },
+
   prettier
 ];
