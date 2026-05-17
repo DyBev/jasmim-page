@@ -3,9 +3,11 @@ import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 import prettier from "eslint-config-prettier";
+import { defineConfig, globalIgnores } from 'eslint/config';
 
-export default [
+export default defineConfig([
   js.configs.recommended,
+  globalIgnores([ "./dist/**" ]),
 
   ...tseslint.configs.recommended,
 
@@ -64,4 +66,4 @@ export default [
   },
 
   prettier
-];
+]);
