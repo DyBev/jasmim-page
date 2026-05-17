@@ -1,0 +1,13 @@
+.link {
+  all: unset;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+  &:hover {
+    background-color: var(--hover);
+  }
+}
+
+.isActive {
+  background-color: var(--selected);
+}
